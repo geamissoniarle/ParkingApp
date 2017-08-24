@@ -1,4 +1,4 @@
 # ParkingApp
-Application for parking
-App by Students the FJN
+Application for parking <br/>
+App by Students of FJN<br/>
 For discipline Programming II

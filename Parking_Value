@@ -1,0 +1,57 @@
+public class Parking_Value {
+	
+	public String input, output;
+	public double Total_Parking;
+	
+	//calculo de tempo de entrada e saida do estacionamento....
+	//baseado na entrada de dados manual do operador.
+	
+	public void calculate_Value(double Hour_value){
+		 String[] timeinput;
+		 String[] timeexit;
+		 double hourInput,minutesInput,hourExit,minutesExit;
+		
+		 timeinput = getInput().split(":");
+		 timeexit = getOutput().split(":");
+		
+		 hourInput = Double.parseDouble(timeinput[0]);
+		 minutesInput = Double.parseDouble(timeinput[1]);
+		 hourExit = Double.parseDouble(timeexit[0]);
+		 minutesExit = Double.parseDouble(timeexit[1]);
+		
+		 Total_Parking =((((hourExit*60)+minutesExit)-
+		((hourInput*60)+minutesInput))/60)*(Hour_value);
+		 
+		 }
+
+
+	public String getInput() {
+		return input;
+	}
+
+
+	public void setInput(String input) {
+		this.input = input;
+	}
+
+
+	public String getOutput() {
+		return output;
+	}
+
+
+	public void setOutput(String output) {
+		this.output = output;
+	}
+
+
+	public double getTotal_Parking() {
+		return Total_Parking;
+	}
+
+
+	public void setTotal_Parking(double total_Parking) {
+		Total_Parking = total_Parking;
+	}
+	
+	
